@@ -1,0 +1,714 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/OnModulus/demeteorizer#readme">demeteorizer (v4.3.0)</a>
+</h1>
+<h4>Converts a Meteor app into a "standard" Node.js application.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.demeteorizer">module demeteorizer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.demeteorizer">
+            function <span class="apidocSignatureSpan"></span>demeteorizer
+            <span class="apidocSignatureSpan">(options, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.copy_dependencies">
+            function <span class="apidocSignatureSpan">demeteorizer.</span>copy_dependencies
+            <span class="apidocSignatureSpan">(options, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.find_node_version">
+            function <span class="apidocSignatureSpan">demeteorizer.</span>find_node_version
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.find_npm_version">
+            function <span class="apidocSignatureSpan">demeteorizer.</span>find_npm_version
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.install">
+            function <span class="apidocSignatureSpan">demeteorizer.</span>install
+            <span class="apidocSignatureSpan">(options, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.toString">
+            function <span class="apidocSignatureSpan">demeteorizer.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.update_package">
+            function <span class="apidocSignatureSpan">demeteorizer.</span>update_package
+            <span class="apidocSignatureSpan">(options, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">demeteorizer.</span>exec</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.demeteorizer.copy_dependencies">module demeteorizer.copy_dependencies</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.copy_dependencies.copy_dependencies">
+            function <span class="apidocSignatureSpan">demeteorizer.</span>copy_dependencies
+            <span class="apidocSignatureSpan">(options, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.demeteorizer.demeteorizer">module demeteorizer.demeteorizer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.demeteorizer.demeteorizer">
+            function <span class="apidocSignatureSpan">demeteorizer.</span>demeteorizer
+            <span class="apidocSignatureSpan">(options, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.demeteorizer.exec">module demeteorizer.exec</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.exec.spawn">
+            function <span class="apidocSignatureSpan">demeteorizer.exec.</span>spawn
+            <span class="apidocSignatureSpan">(command, args, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.demeteorizer.find_node_version">module demeteorizer.find_node_version</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.find_node_version.find_node_version">
+            function <span class="apidocSignatureSpan">demeteorizer.</span>find_node_version
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.demeteorizer.find_npm_version">module demeteorizer.find_npm_version</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.find_npm_version.find_npm_version">
+            function <span class="apidocSignatureSpan">demeteorizer.</span>find_npm_version
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.demeteorizer.install">module demeteorizer.install</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.install.install">
+            function <span class="apidocSignatureSpan">demeteorizer.</span>install
+            <span class="apidocSignatureSpan">(options, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.demeteorizer.toString">module demeteorizer.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.toString.toString">
+            function <span class="apidocSignatureSpan">demeteorizer.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.demeteorizer.update_package">module demeteorizer.update_package</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.update_package.update_package">
+            function <span class="apidocSignatureSpan">demeteorizer.</span>update_package
+            <span class="apidocSignatureSpan">(options, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.demeteorizer" id="apidoc.module.demeteorizer">module demeteorizer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.demeteorizer" id="apidoc.element.demeteorizer.demeteorizer">
+        function <span class="apidocSignatureSpan"></span>demeteorizer
+        <span class="apidocSignatureSpan">(options, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(options, done) =&gt; {
+  Hoek.assert(options !== undefined, 'You must provide a valid options object')
+
+  Install(options, (err) =&gt; {
+    if (err) return done(err)
+
+    Build(options, (err) =&gt; {
+      if (err) return done(err)
+
+      CopyDependencies(options, (err) =&gt; {
+        if (err) return done(err)
+
+        UpdatePackage(options, done)
+      })
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.copy_dependencies" id="apidoc.element.demeteorizer.copy_dependencies">
+        function <span class="apidocSignatureSpan">demeteorizer.</span>copy_dependencies
+        <span class="apidocSignatureSpan">(options, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">copy_dependencies = function (options, done) {
+  var source = Path.resolve(options.input, 'node_modules')
+  var destination = Path.resolve(options.directory,
+    'bundle/programs/server/node_modules'
+  )
+
+  FS.readdir(source, function (err) {
+    if (err &amp;&amp; err.code === 'ENOENT') return done()
+    if (err) return done(err)
+
+    FS.copy(source, destination, done)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.find_node_version" id="apidoc.element.demeteorizer.find_node_version">
+        function <span class="apidocSignatureSpan">demeteorizer.</span>find_node_version
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(options) =&gt; {
+  var version
+
+  Hoek.assert(options !== undefined, 'options is required')
+  Hoek.assert(Fs.existsSync(options.directory), 'Output directory not found')
+
+  version = options.nodeVersion
+  if (!version) version = fromPackage(options)
+  if (!version) version = fromBoot(options)
+
+  return version || DEFAULT_NODE_VERSION
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.find_npm_version" id="apidoc.element.demeteorizer.find_npm_version">
+        function <span class="apidocSignatureSpan">demeteorizer.</span>find_npm_version
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(options) =&gt; {
+  var version
+
+  Hoek.assert(options !== undefined, 'options is required')
+
+  version = options.npmVersion
+  if (!version) version = fromPackage(options)
+
+  return version || DEFAULT_NPM_VERSION
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.install" id="apidoc.element.demeteorizer.install">
+        function <span class="apidocSignatureSpan">demeteorizer.</span>install
+        <span class="apidocSignatureSpan">(options, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">install = function (options, done) {
+  var pkgPath = Path.resolve(options.input, 'package.json')
+
+  FS.access(pkgPath, FS.F_OK, function (err) {
+    var args, install
+
+    if (err) return done()
+
+    args = ['install', '--production']
+
+    install = Exec.spawn('npm', args, { cwd: options.input, stdio: 'inherit' })
+
+    install.on('error', function (err) {
+      return done(err)
+    })
+
+    install.on('close', function (code) {
+      if (code !== 0) return done(new Error('NPM install failed.'))
+      done()
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.toString" id="apidoc.element.demeteorizer.toString">
+        function <span class="apidocSignatureSpan">demeteorizer.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.update_package" id="apidoc.element.demeteorizer.update_package">
+        function <span class="apidocSignatureSpan">demeteorizer.</span>update_package
+        <span class="apidocSignatureSpan">(options, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(options, done) =&gt; {
+  var packagePath, packageContents
+
+  Hoek.assert(options !== undefined, 'options is required')
+  Hoek.assert(Fs.existsSync(options.directory), 'Output directory not found')
+
+  packagePath = Path.resolve(
+    options.directory,
+    'bundle',
+    'programs',
+    'server',
+    'package.json')
+
+  //
+  // Manual parsing of the package.json allows mocking of the read.
+  //
+  packageContents = JSON.parse(Fs.readFileSync(packagePath))
+
+  packageContents.engines = {
+    node: FindNodeVersion(options),
+    npm: FindNpmVersion(options)
+  }
+
+  packageContents.main = '../../main.js'
+  packageContents.scripts = { start: 'node ../../main' }
+
+  Hoek.merge(packageContents, options.json || {})
+
+  Fs.chmodSync(packagePath, '0644')
+  Fs.writeFile(packagePath, JSON.stringify(packageContents, null, 2), done)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.demeteorizer.copy_dependencies" id="apidoc.module.demeteorizer.copy_dependencies">module demeteorizer.copy_dependencies</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.copy_dependencies.copy_dependencies" id="apidoc.element.demeteorizer.copy_dependencies.copy_dependencies">
+        function <span class="apidocSignatureSpan">demeteorizer.</span>copy_dependencies
+        <span class="apidocSignatureSpan">(options, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">copy_dependencies = function (options, done) {
+  var source = Path.resolve(options.input, 'node_modules')
+  var destination = Path.resolve(options.directory,
+    'bundle/programs/server/node_modules'
+  )
+
+  FS.readdir(source, function (err) {
+    if (err &amp;&amp; err.code === 'ENOENT') return done()
+    if (err) return done(err)
+
+    FS.copy(source, destination, done)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.demeteorizer.demeteorizer" id="apidoc.module.demeteorizer.demeteorizer">module demeteorizer.demeteorizer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.demeteorizer.demeteorizer" id="apidoc.element.demeteorizer.demeteorizer.demeteorizer">
+        function <span class="apidocSignatureSpan">demeteorizer.</span>demeteorizer
+        <span class="apidocSignatureSpan">(options, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(options, done) =&gt; {
+  Hoek.assert(options !== undefined, 'You must provide a valid options object')
+
+  Install(options, (err) =&gt; {
+    if (err) return done(err)
+
+    Build(options, (err) =&gt; {
+      if (err) return done(err)
+
+      CopyDependencies(options, (err) =&gt; {
+        if (err) return done(err)
+
+        UpdatePackage(options, done)
+      })
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.demeteorizer.exec" id="apidoc.module.demeteorizer.exec">module demeteorizer.exec</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.exec.spawn" id="apidoc.element.demeteorizer.exec.spawn">
+        function <span class="apidocSignatureSpan">demeteorizer.exec.</span>spawn
+        <span class="apidocSignatureSpan">(command, args, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function spawn(command, args, options) {
+    var parsed;
+    var spawned;
+
+    // Parse the arguments
+    parsed = parse(command, args, options);
+
+    // Spawn the child process
+    spawned = cp.spawn(parsed.command, parsed.args, parsed.options);
+
+    // Hook into child process "exit" event to emit an error if the command
+    // does not exists, see: https://github.com/IndigoUnited/node-cross-spawn/issues/16
+    enoent.hookChildProcess(spawned, parsed);
+
+    return spawned;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  FS.access(pkgPath, FS.F_OK, function (err) {
+var args, install
+
+if (err) return done()
+
+args = ['install', '--production']
+
+install = Exec.<span class="apidocCodeKeywordSpan">spawn</span>('npm', args, { cwd: options.input, stdio: 'inherit
+' })
+
+install.on('error', function (err) {
+  return done(err)
+})
+
+install.on('close', function (code) {
+  if (code !== 0) return done(new Error('NPM install failed.'))
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.demeteorizer.find_node_version" id="apidoc.module.demeteorizer.find_node_version">module demeteorizer.find_node_version</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.find_node_version.find_node_version" id="apidoc.element.demeteorizer.find_node_version.find_node_version">
+        function <span class="apidocSignatureSpan">demeteorizer.</span>find_node_version
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(options) =&gt; {
+  var version
+
+  Hoek.assert(options !== undefined, 'options is required')
+  Hoek.assert(Fs.existsSync(options.directory), 'Output directory not found')
+
+  version = options.nodeVersion
+  if (!version) version = fromPackage(options)
+  if (!version) version = fromBoot(options)
+
+  return version || DEFAULT_NODE_VERSION
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.demeteorizer.find_npm_version" id="apidoc.module.demeteorizer.find_npm_version">module demeteorizer.find_npm_version</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.find_npm_version.find_npm_version" id="apidoc.element.demeteorizer.find_npm_version.find_npm_version">
+        function <span class="apidocSignatureSpan">demeteorizer.</span>find_npm_version
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(options) =&gt; {
+  var version
+
+  Hoek.assert(options !== undefined, 'options is required')
+
+  version = options.npmVersion
+  if (!version) version = fromPackage(options)
+
+  return version || DEFAULT_NPM_VERSION
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.demeteorizer.install" id="apidoc.module.demeteorizer.install">module demeteorizer.install</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.install.install" id="apidoc.element.demeteorizer.install.install">
+        function <span class="apidocSignatureSpan">demeteorizer.</span>install
+        <span class="apidocSignatureSpan">(options, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">install = function (options, done) {
+  var pkgPath = Path.resolve(options.input, 'package.json')
+
+  FS.access(pkgPath, FS.F_OK, function (err) {
+    var args, install
+
+    if (err) return done()
+
+    args = ['install', '--production']
+
+    install = Exec.spawn('npm', args, { cwd: options.input, stdio: 'inherit' })
+
+    install.on('error', function (err) {
+      return done(err)
+    })
+
+    install.on('close', function (code) {
+      if (code !== 0) return done(new Error('NPM install failed.'))
+      done()
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.demeteorizer.toString" id="apidoc.module.demeteorizer.toString">module demeteorizer.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.toString.toString" id="apidoc.element.demeteorizer.toString.toString">
+        function <span class="apidocSignatureSpan">demeteorizer.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.demeteorizer.update_package" id="apidoc.module.demeteorizer.update_package">module demeteorizer.update_package</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.demeteorizer.update_package.update_package" id="apidoc.element.demeteorizer.update_package.update_package">
+        function <span class="apidocSignatureSpan">demeteorizer.</span>update_package
+        <span class="apidocSignatureSpan">(options, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(options, done) =&gt; {
+  var packagePath, packageContents
+
+  Hoek.assert(options !== undefined, 'options is required')
+  Hoek.assert(Fs.existsSync(options.directory), 'Output directory not found')
+
+  packagePath = Path.resolve(
+    options.directory,
+    'bundle',
+    'programs',
+    'server',
+    'package.json')
+
+  //
+  // Manual parsing of the package.json allows mocking of the read.
+  //
+  packageContents = JSON.parse(Fs.readFileSync(packagePath))
+
+  packageContents.engines = {
+    node: FindNodeVersion(options),
+    npm: FindNpmVersion(options)
+  }
+
+  packageContents.main = '../../main.js'
+  packageContents.scripts = { start: 'node ../../main' }
+
+  Hoek.merge(packageContents, options.json || {})
+
+  Fs.chmodSync(packagePath, '0644')
+  Fs.writeFile(packagePath, JSON.stringify(packageContents, null, 2), done)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
