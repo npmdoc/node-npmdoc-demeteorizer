@@ -1,6 +1,6 @@
 # npmdoc-demeteorizer
 
-#### api documentation for  [demeteorizer (v4.3.0)](https://github.com/OnModulus/demeteorizer#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-demeteorizer.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-demeteorizer) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-demeteorizer.svg)](https://travis-ci.org/npmdoc/node-npmdoc-demeteorizer)
+#### basic api documentation for  [demeteorizer (v4.3.0)](https://github.com/OnModulus/demeteorizer#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-demeteorizer.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-demeteorizer) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-demeteorizer.svg)](https://travis-ci.org/npmdoc/node-npmdoc-demeteorizer)
 
 #### Converts a Meteor app into a "standard" Node.js application.
 
