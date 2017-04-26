@@ -72,15 +72,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.demeteorizer.toString">
-            function <span class="apidocSignatureSpan">demeteorizer.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">demeteorizer.</span>exec</span>
 
         </li>
@@ -135,21 +126,6 @@
 
 
 
-    <h2>
-        <a href="#apidoc.element.demeteorizer.toString" id="apidoc.element.demeteorizer.toString">
-        function <span class="apidocSignatureSpan">demeteorizer.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
 
 </div>
 
@@ -181,22 +157,21 @@
     return spawned;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  FS.access(pkgPath, FS.F_OK, function (err) {
-var args, install
+  args.push(options.architecture)
+}
 
-if (err) return done()
+if (options.debug) args.push(&#x27;--debug&#x27;)
+if (options.serverOnly) args.push(&#x27;--server-only&#x27;)
+if (options.verbose) args.push(&#x27;--verbose&#x27;)
 
-args = [&#x27;install&#x27;, &#x27;--production&#x27;]
-
-install = Exec.<span class="apidocCodeKeywordSpan">spawn</span>(&#x27;npm&#x27;, args, { cwd: options.input, stdio: &#x27;inherit
+build = Exec.<span class="apidocCodeKeywordSpan">spawn</span>(&#x27;meteor&#x27;, args, { cwd: options.input, stdio: &#x27;inherit
 &#x27; })
 
-install.on(&#x27;error&#x27;, function (err) {
-  return done(err)
-})
-
-install.on(&#x27;close&#x27;, function (code) {
-  if (code !== 0) return done(new Error(&#x27;NPM install failed.&#x27;))
+build.on(&#x27;error&#x27;, (err) =&#x3e; {
+  var message = [
+    &#x27;Meteor not in $PATH.&#x27;,
+    &#x27;Please make sure Meteor is installed properly.&#x27;
+  ].join(&#x27; &#x27;)
 ...</pre></li>
     </ul>
 
